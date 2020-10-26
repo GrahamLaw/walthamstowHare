@@ -1,0 +1,19 @@
+
+a {
+    background-color: #3f51b5;
+    color: white;
+} 
+
+
+  .content div {
+    margin: 30px;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
