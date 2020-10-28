@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist\\walthamstow-hare",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
