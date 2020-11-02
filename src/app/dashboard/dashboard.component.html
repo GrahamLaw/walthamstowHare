@@ -31,18 +31,24 @@
               </div>
             </div> -->
           </div>
-          <input type="text" class="form-control" placeholder="XXXX" aria-label="Answer" aria-describedby="basic-addon1">
+          <div class="d-flex justify-content-center">
+            <input type="text" style="width:100px" class="form-control" placeholder="XXXX" name="userAnswer" (ngModelChange)="onChange()" [ngModel]="userAnswer">
+          </div>
           <hr />
           <div class="text-center">
            <!--  <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(0);">First</button>
             <button class="btn btn -default" *ngIf="config.allowBack" (click)="goTo(pager.index - 1);">Prev</button> -->
             <!-- <button class="btn btn-primary" (click)="goTo(pager.index + 1);">Next</button> -->
-            <a mat-button (click)="goTo(pager.index + 1);"> Next</a>
+            <a mat-button (click)="onAnswer()"> Enter</a>
+            
+            <!-- <a mat-button (click)="goTo(pager.index + 1);"> Enter</a> -->
             <!-- <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Last</button> -->
            
           </div>
-       
 
+          <div *ngIf="correct == false" class="text-center" style="color: red; font-weight: bold;">
+            {{userAnswer}} is wrong!
+          </div>
     </div>
 </div>
 

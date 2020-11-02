@@ -8,5 +8,6 @@ export class Question {
         data = data || {};
         this.id = data.id;
         this.name = data.name;
+        this.answer = data.answer;
     }
 }

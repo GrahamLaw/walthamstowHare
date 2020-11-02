@@ -8,19 +8,26 @@ import { MatIconModule} from  '@angular/material/icon';
 import { MatSidenavModule} from  '@angular/material/sidenav';
 import { MatListModule} from  '@angular/material/list';
 import { MatButtonModule } from  '@angular/material/button';
+import { FormsModule } from  '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TestComponent } from './test/test.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { Test1Component } from './test1/test1.component';
+import { Test2Component } from './test2/test2.component';
+import { Test3Component } from './test3/test3.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TestComponent,
-    DashboardComponent
+    DashboardComponent,
+    Test1Component,
+    Test2Component,
+    Test3Component
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatSidenavModule, 
     MatListModule, 
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { QuestService } from '../services/quest.service';
 import { Quest } from '../models/quest'
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,6 +18,8 @@ export class DashboardComponent implements OnInit {
   duration: string;
   quest: any;
   mode: string;
+  public userAnswer: string;
+  correct: boolean = true;
 
   pager = {
     index: 0,
@@ -52,6 +54,7 @@ export class DashboardComponent implements OnInit {
     return (this.quest.questions) ?
       this.quest.questions.slice(this.pager.index, this.pager.index + this.pager.size) : [];
   }
+
 
   goTo(index: number) {
     console.log('index');
@@ -91,7 +94,28 @@ export class DashboardComponent implements OnInit {
 
     // Post your data to the server here. answers contains the questionId and the users' answer.
     console.log(this.quest.questions);
+  }
 
+  onChange() {
+    console.log('changedddddd');
+    console.log(this.userAnswer);
+    this.correct = true;
+  }
+
+  
+  onAnswer() {
+    console.log(this.userAnswer);
+    console.log(this.filteredQuestions[0].answer);
+    if (this.userAnswer == this.filteredQuestions[0].answer)
+    {
+      this.correct = true;
+      this.userAnswer = null;
+      this.goTo(this.pager.index + 1);
+    }
+    else 
+    {
+      this.correct = false;
+    }
   }
 
 }
