@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-test1',
-  templateUrl: './test1.component.html',
-  styleUrls: ['./test1.component.scss']
+  selector: 'app-splashscreen',
+  templateUrl: './splashscreen.component.html',
+  styleUrls: ['./splashscreen.component.scss']
 })
-export class Test1Component implements OnInit {
+export class SplashscreenComponent implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -17,4 +17,5 @@ export class Test1Component implements OnInit {
     console.log('ckeciked here')
     this.router.navigate(['dashboard']);
   }
+
 }

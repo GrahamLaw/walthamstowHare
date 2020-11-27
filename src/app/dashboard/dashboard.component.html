@@ -1,21 +1,20 @@
 
 
 <div class="content">
+<!--     <div *ngIf="mode=='start'"> 
+        <h2>Welcome to the Forest</h2>
+    </div>
     <div *ngIf="mode=='start'"> 
-            <h2>Welcome to the Forest</h2>
-        </div>
-        <div *ngIf="mode=='start'"> 
-            <a mat-button (click)="onStart()"> Start Trail! </a>
-        </div>
+        <a mat-button (click)="onStart()"> Start Trail! </a>
+    </div> -->
 
 
     <div *ngIf="mode=='quest'">
-        <h2 class="text-center font-weight-normal">{{quest.name}}</h2>
-        <hr />
+      <!--    <h2 class="text-center font-weight-normal">{{quest.name}}</h2>-->
+        <img src="assets/border-top.png"  width="350" height="70">
       
- 
           <div *ngFor="let question of filteredQuestions;">
-            <div class="badge badge-info">Question {{pager.index + 1}} of {{pager.count}}.</div>
+            <!-- <div class="badge badge-info">Question {{pager.index + 1}} of {{pager.count}}.</div> -->
             <!-- <div *ngIf="config.duration" class="badge badge-info float-right">Time: {{ellapsedTime}} / {{duration}}</div> -->
             <h3 class="font-weight-normal">
                 <!-- {{pager.index + 1}}. -->
@@ -31,21 +30,26 @@
               </div>
             </div> -->
           </div>
-          <div class="d-flex justify-content-center">
-            <input type="text" style="width:100px" class="form-control" placeholder="XXXX" name="userAnswer" (ngModelChange)="onChange()" [ngModel]="userAnswer">
-          </div>
-          <hr />
+     
+          <img src="assets/border-bottom.png"  width="400" height="80">
           <div class="text-center">
            <!--  <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(0);">First</button>
             <button class="btn btn -default" *ngIf="config.allowBack" (click)="goTo(pager.index - 1);">Prev</button> -->
             <!-- <button class="btn btn-primary" (click)="goTo(pager.index + 1);">Next</button> -->
-            <a mat-button (click)="onAnswer()"> Enter</a>
+            
+            <hr>
+            <div class="d-flex justify-content-center">
+              <input type="text" style="width:100px" class="form-control" placeholder="XXXX" name="userAnswer" (ngModelChange)="onChange()" [ngModel]="userAnswer">
+              <a style="margin-left: 20px" mat-button (click)="onAnswer()"> Enter</a>
+            </div>
+
+            
             
             <!-- <a mat-button (click)="goTo(pager.index + 1);"> Enter</a> -->
             <!-- <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Last</button> -->
            
           </div>
-
+        
           <div *ngIf="correct == false" class="text-center" style="color: red; font-weight: bold;">
             {{userAnswer}} is wrong!
           </div>

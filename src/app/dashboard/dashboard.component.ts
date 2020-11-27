@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.questName = 'data/quest.json';
-    this.mode = 'start';
+    this.mode = 'quest';
     this.loadQuiz(this.questName);
   }
 
