@@ -1,27 +1,22 @@
 {
-    "id": 1,
-    "name": "Walthamstow Trail",
-    "description": "A trail around the Stow",
-    "questions": [
-        {
-            "id": 1010,
-            "name": "Start here, walk a bit, walk a bit more. What is the answer?",
-            "answer": 1111
-        },
-		{
-            "id": 1011,
-            "name": "Go left, left, left and then left again. What is the answer?",
-            "answer": 2222
-        },
-		{
-            "id": 1012,
-            "name": "To be or not to be. What is the answer?",
-            "answer": 3333
-        },
-		{
-            "id": 1013,
-            "name": "Do or do not. There is no try. What is the answer?",
-            "answer": 4444
-        }
-    ]
+  "id": 1,
+  "name": "Walthamstow Trail",
+  "description": "A trail around the Stow",
+  "questions": [
+    {
+      "id": 1010,
+      "name": "Start here, walk a bit, walk a bit more. What is the answer?",
+      "answer": 1111
+    },
+    {
+      "id": 1011,
+      "name": "Go left, left, left and then left again. What is the answer?",
+      "answer": 2222
+    },
+    {
+      "id": 1012,
+      "name": "To be or not to be. What is the answer?",
+      "answer": 3333
+    }
+  ]
 }

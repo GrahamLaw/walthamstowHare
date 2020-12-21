@@ -1,3 +1,4 @@
+import { ResultsComponent } from './results/results.component';
 import { SplashscreenComponent } from './splashscreen/splashscreen.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,6 +11,7 @@ import { Test3Component } from './test3/test3.component';
 const routes: Routes = [
   { path: 'splashscreen', component: SplashscreenComponent},
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'results', component: ResultsComponent},
   { path: 'test', component: TestComponent},
   { path: 'test1', component: Test1Component},
   { path: 'test2', component: Test2Component},

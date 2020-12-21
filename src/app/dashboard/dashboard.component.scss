@@ -1,15 +1,18 @@
 
-a {
+button {
     background-color: #3f51b5;
     color: white;
 } 
 
+h1 {
+  margin: 10px 10px 50px 10px
+}
 
-  .content div {
+/*   .content div {
     margin: 30px;
   }
-
-  .content {
+ */
+/*   .content {
     display: flex;
     margin: 82px auto 32px;
     padding: 0 16px;
@@ -17,9 +20,36 @@ a {
     flex-direction: column;
     align-items: center;
   }
+ */
+
+ .bodyx {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  // background-color: #f5f5f5;
+  flex-direction: column;
+}
 
 
   img {
-    background-color: blue;
+  //  background-color: blue;
     align-items: center;
+  }
+
+  .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
   }

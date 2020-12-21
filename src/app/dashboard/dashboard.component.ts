@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { QuestService } from '../services/quest.service';
 import { Quest } from '../models/quest'
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,7 +19,8 @@ export class DashboardComponent implements OnInit {
   duration: string;
   quest: any;
   mode: string;
-  public userAnswer: string;
+  public userAnswer: string = "";
+  public errorAnswer: string = "";
   correct: boolean = true;
 
   pager = {
@@ -27,7 +29,7 @@ export class DashboardComponent implements OnInit {
     count: 1
   };
 
-  constructor(private questService: QuestService) { }
+  constructor(private questService: QuestService, private router: Router) { }
 
   ngOnInit() {
     this.questName = 'data/quest.json';
@@ -63,6 +65,9 @@ export class DashboardComponent implements OnInit {
     if (index >= 0 && index < this.pager.count) {
       this.pager.index = index;
       console.log('index call');
+    } else {
+      console.log('end of questions');
+      this.mode = "results"
     }
     console.log(this.pager.index);
   }
@@ -88,14 +93,6 @@ export class DashboardComponent implements OnInit {
     this.mode = 'quest';
   }
 
-  onSubmit() {
-    let answers = [];
-    // this.quest.questions.forEach(x => answers.push({ 'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.answered }));
-
-    // Post your data to the server here. answers contains the questionId and the users' answer.
-    console.log(this.quest.questions);
-  }
-
   onChange() {
     console.log('changedddddd');
     console.log(this.userAnswer);
@@ -114,8 +111,15 @@ export class DashboardComponent implements OnInit {
     }
     else 
     {
+      this.errorAnswer = this.userAnswer
+      console.log(this.errorAnswer);
       this.correct = false;
     }
+  }
+
+  
+  onResults() {
+    this.router.navigate(['results']);
   }
 
 }
