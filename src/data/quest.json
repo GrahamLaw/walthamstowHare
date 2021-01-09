@@ -2,21 +2,25 @@
   "id": 1,
   "name": "Walthamstow Trail",
   "description": "A trail around the Stow",
+  "hintCount": 5,
   "questions": [
     {
       "id": 1010,
       "name": "Start here, walk a bit, walk a bit more. What is the answer?",
-      "answer": 1111
+      "answer": 1111,
+      "hint": "all ones"
     },
     {
       "id": 1011,
       "name": "Go left, left, left and then left again. What is the answer?",
-      "answer": 2222
+      "answer": 2222,
+      "hint": "all twos"
     },
     {
       "id": 1012,
       "name": "To be or not to be. What is the answer?",
-      "answer": 3333
+      "answer": 3333,
+      "hint": "all three"
     }
   ]
 }
