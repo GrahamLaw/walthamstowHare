@@ -8,7 +8,7 @@ import { MatIconModule} from  '@angular/material/icon';
 import { MatSidenavModule} from  '@angular/material/sidenav';
 import { MatListModule} from  '@angular/material/list';
 import { MatButtonModule } from  '@angular/material/button';
-import { FormsModule } from  '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from  '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,7 +43,8 @@ import { ResultsComponent } from './results/results.component';
     MatListModule, 
     MatButtonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

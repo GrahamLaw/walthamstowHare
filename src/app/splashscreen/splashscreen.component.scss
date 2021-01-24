@@ -1,52 +1,33 @@
-/* .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  } */
 
-  body {
-    margin: 0;
-   // padding: 1rem;
-    max-width: 1200px;
-   //  margin: 0px auto;
 
-   height: 100%;
-   
-  }
+body {
+  margin: 0;
+  // padding: 1rem;
+  max-width: 1200px;
+  //  margin: 0px auto;
+
+  height: 100%;
+  
+}
  
-  .container2{
-    display:flex;
-    height: 100%;
-    min-height: 100%;
-    // background-color: black;
+.container2{
+  display:flex;
+  height: 100%;
+  min-height: 100%;
+  // background-color: black;
 }
 
 .column-1 {
  // flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
-  flex-basis: 70%; /* sets initial width to 70% */
+  flex-basis: 30%; /* sets initial width to 70% */
 }
 
 .column-2 {
     flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
-    flex-basis: 30%; /* sets initial width to 70% */
-}
-
-.column-3 {
-// flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
-    flex-basis: 30%; /* sets initial width to 70% */
-}
-
-.column-4 {
-    //  flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
     flex-basis: 70%; /* sets initial width to 70% */
 }
-   
 
-.box {
-  //background-color: #98ff98 ;
+.box {  
   background-color: #36454f;
   //padding: 10px;
  // border-radius: 12px;
@@ -60,7 +41,7 @@
   text-align: center;
   font-family: sans-serif;
   font-size: 36px;
-  padding: 30px;
+  padding: 10px;
   
   display: flex;
   flex-direction: column;
@@ -79,7 +60,7 @@
     text-align: center;
    // font-family: sans-serif;
     font-size: 36px;
-    padding: 30px;
+    padding: 10px;
     
     display: flex;
     flex-direction: column;
@@ -87,31 +68,10 @@
 
   .title {
       margin: 15px;
+      text-align: left;
   }
 
-  .t1 {
-    text-align: right;
-  }
-
-  .t2 {
-    text-align: right;
-  }
-
-  .t3 {
-    text-align: right;
-    color: #98ff98;
-  }
-
-  .t4 {
-    text-align: left;
-  }
-
-  .t5 {
-    text-align: left;
-  }
-
-  .t6 {
-    text-align: left;
+  .highlight {    
     color: #98ff98;
   }
 
@@ -120,4 +80,23 @@
   width: 50%;
   color: #98ff98;
   background-color: #36454f;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+
+
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
 }
