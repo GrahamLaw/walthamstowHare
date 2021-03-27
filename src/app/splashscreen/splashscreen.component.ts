@@ -42,6 +42,7 @@ export class SplashscreenComponent implements OnInit {
     }
 
     console.log(value);
+    this.router.navigate(['dashboard']);
   }
 
 }

@@ -8,6 +8,7 @@ import { MatIconModule} from  '@angular/material/icon';
 import { MatSidenavModule} from  '@angular/material/sidenav';
 import { MatListModule} from  '@angular/material/list';
 import { MatButtonModule } from  '@angular/material/button';
+import { MatDialogModule } from  '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule  } from  '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +21,8 @@ import { Test2Component } from './test2/test2.component';
 import { Test3Component } from './test3/test3.component';
 import { SplashscreenComponent } from './splashscreen/splashscreen.component';
 import { ResultsComponent } from './results/results.component';
+import { ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.component';
+import { ButtonDemoComponent } from './button-demo/button-demo.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { ResultsComponent } from './results/results.component';
     Test2Component,
     Test3Component,
     SplashscreenComponent,
-    ResultsComponent
+    ResultsComponent,
+    ConfirmDialogComponent,
+    ButtonDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,8 @@ import { ResultsComponent } from './results/results.component';
     MatButtonModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
