@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { trigger,  state,  style,  animate,  transition } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 // import { QuestService } from '../services/quest.service';
-import { QuestService } from '@/services/quest.service';
+import { QuestService } from '@/services/quest-service/quest.service';
 import { Quest } from '../models/quest'
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';

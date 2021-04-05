@@ -1,26 +1,33 @@
 
 <div class="container">
-  <h4 class="d-flex justify-content-between align-items-center mt-4">
-    <div>
-      <span class="text-muted">Time elapsed: {{ ellapsedTime }}</span>    
+  <header class="border-bottom py-3">
+    <h5 class="my-0 mr-md-auto font-weight-normal text-center #">Time: {{ ellapsedTime }}</h5>
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <button type="button" class="btn btn-primary btn-sm" (click)="hintClick()">
+          Hint <span class="badge badge-light">{{ this.quest.hintCount }}</span>
+        </button>
+      </div>
+      <div class="col-4 text-center">
+        <button type="button" class="btn btn-info btn-sm" (click)="hintClick()">
+          Skip 
+        </button>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <button type="button" class="btn btn-outline-danger btn-sm" (click)="hintClick()">
+          Help I'm Lost 
+        </button>
+      </div>
     </div>
-    <div>
-      <button type="button" class="btn btn-primary btn-sm mr-5" (click)="hintClick()">
-        Hint <span class="badge badge-light">{{ this.quest.hintCount }}</span>
-      </button>
-      <button type="button" class="btn btn-info btn-sm mr-3" (click)="hintClick()">
-        Skip 
-      </button>
-      <button type="button" class="btn btn-outline-danger btn-sm" (click)="hintClick()">
-        Help I'm Lost 
-      </button>
-    </div>
-  </h4>
-  <h4 class="d-flex justify-content-between align-items-center">
+  </header>
+
+
+  
+<!--   <h4 class="d-flex justify-content-between align-items-center">
     <div>
       <span class="text-muted">Penalties: {{ ellapsedTime }}</span>    
     </div>
-  </h4>
+  </h4> -->
   <div class="text-center bodyx">
     <div *ngIf="mode == 'quest'">
       <!-- <img src="assets/border-top.png" height="60" /> -->
@@ -29,7 +36,7 @@
       <div *ngFor="let question of filteredQuestions">
        
         <form class="form-signin mb-3">
-          <h1 class="font-weight-normal mb-8">{{ question.name }}</h1>
+          <h1 class="font-weight-normal mb-6">{{ question.name }}</h1>
           <div *ngIf="correct == false" class="text-center mt-3" style="color: red; font-weight: bold"  @fadeIn>
             {{ errorAnswer }} is wrong!
           </div>
