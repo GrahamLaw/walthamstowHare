@@ -24,6 +24,7 @@ import { ResultsComponent } from './results/results.component';
 import { ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.component';
 import { ButtonDemoComponent } from './button-demo/button-demo.component';
 import { TestAnimationsComponent } from './test-animations/test-animations.component';
+import { BeginComponent } from './begin/begin.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { TestAnimationsComponent } from './test-animations/test-animations.compo
     ResultsComponent,
     ConfirmDialogComponent,
     ButtonDemoComponent,
-    TestAnimationsComponent
+    TestAnimationsComponent,
+    BeginComponent
   ],
   imports: [
     BrowserModule,

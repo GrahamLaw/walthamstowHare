@@ -1,7 +1,7 @@
 
 button {
-    background-color: #3f51b5;
-    color: white;
+   // background-color: #3f51b5;
+   // color: white;
     box-shadow: 0px 3px 1px -2px rgba(0, 0 ,0,0.2), 0px 2px 3px 0px rgba(0, 0 ,0,0.14), 0px 1px 5px 0px rgba(0, 0 ,0,0.12);
 } 
 
@@ -49,10 +49,12 @@ h1 {
  /*    border-color: red;
     border-width: 10px;
     border-style: double; */
-    border: 10px double black;
-    outline: 3px solid black;
+    border-radius: 25px;
+
+    border: 10px double rgba(36, 35, 35, 0.514);
+   // outline: 3px solid black;
     // box-shadow: 0px 3px 1px -2px rgba(0, 0 ,0,0.2), 0px 2px 3px 0px rgba(0, 0 ,0,0.14), 0px 1px 5px 0px rgba(0, 0 ,0,0.12);
-    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 30px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0 3pt 2pt rgba(36, 35, 35, 0.514), 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 30px 0 rgba(0, 0, 0, 0.19);
     
   }
 
@@ -61,5 +63,5 @@ h1 {
     box-sizing: border-box;
     height: auto;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1em;
   }

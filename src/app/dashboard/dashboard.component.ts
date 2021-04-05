@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { trigger,  state,  style,  animate,  transition } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 // import { QuestService } from '../services/quest.service';
 import { QuestService } from '@/services/quest.service';
@@ -8,10 +9,24 @@ import { Router } from '@angular/router';
 import { ConfirmDialogComponent, ConfirmDialogModel } from '@/shared/confirm-dialog/confirm-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 
+const enterTransition = transition(':enter', [
+  style({
+    opacity: 0
+  }),
+  animate('1s ease-in', style({
+    opacity: 1
+  }))
+]);
+
+const fadeIn = trigger('fadeIn', [
+  enterTransition
+]);
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  animations: [fadeIn]
 })
 export class DashboardComponent implements OnInit {
   questName: string;
