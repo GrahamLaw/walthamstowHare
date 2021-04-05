@@ -23,6 +23,7 @@ import { SplashscreenComponent } from './splashscreen/splashscreen.component';
 import { ResultsComponent } from './results/results.component';
 import { ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.component';
 import { ButtonDemoComponent } from './button-demo/button-demo.component';
+import { TestAnimationsComponent } from './test-animations/test-animations.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ButtonDemoComponent } from './button-demo/button-demo.component';
     SplashscreenComponent,
     ResultsComponent,
     ConfirmDialogComponent,
-    ButtonDemoComponent
+    ButtonDemoComponent,
+    TestAnimationsComponent
   ],
   imports: [
     BrowserModule,
