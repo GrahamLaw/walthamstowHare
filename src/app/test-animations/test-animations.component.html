@@ -1,0 +1,11 @@
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>
+
+<button class="btn btn-lg btn-block" type="submit" (click)="toggle()">
+    Results
+  </button>
+
+<div class="open-close-container" *ngIf="show" @fadeIn @fadeOut>
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>

@@ -5,6 +5,8 @@ import { QuestService } from '@/services/quest.service';
 import { Quest } from '../models/quest'
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ConfirmDialogComponent, ConfirmDialogModel } from '@/shared/confirm-dialog/confirm-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dashboard',
@@ -29,8 +31,10 @@ export class DashboardComponent implements OnInit {
     size: 1,
     count: 1
   };
+  result: any;
 
-  constructor(private questService: QuestService, private router: Router) { }
+
+  constructor(private questService: QuestService, private router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.questName = 'data/quest.json';
@@ -128,9 +132,28 @@ export class DashboardComponent implements OnInit {
 
   hintClick(): void  {
     console.log("hint click");
+
+    this.confirmDialog();
 /*     let dialogRef = dialog.open(YourDialog, {
       data: { name: 'austin' },
     }); */
+  }
+
+  confirmDialog(): void {
+    
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      maxWidth: "600px",
+      data: new ConfirmDialogModel("Confirm Action", `Are you sure you want to do this?`)
+    });
+ 
+    dialogRef.afterClosed().subscribe(dialogResult => {
+      this.result = dialogResult;
+    });
+
+
+    /* this.questService.get(questName).subscribe(res => {
+      this.quest = new Quest(res);   
+    } */
   }
 
 }

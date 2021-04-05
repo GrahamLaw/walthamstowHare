@@ -2,6 +2,7 @@
 button {
     background-color: #3f51b5;
     color: white;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0 ,0,0.2), 0px 2px 3px 0px rgba(0, 0 ,0,0.14), 0px 1px 5px 0px rgba(0, 0 ,0,0.12);
 } 
 
 h1 {
@@ -31,6 +32,7 @@ h1 {
   padding-bottom: 40px;
   // background-color: #f5f5f5;
   flex-direction: column;
+
 }
 
 
@@ -41,9 +43,17 @@ h1 {
 
   .form-signin {
     width: 100%;
-    max-width: 330px;
+    max-width: 500px;
     padding: 15px;
     margin: auto;
+ /*    border-color: red;
+    border-width: 10px;
+    border-style: double; */
+    border: 10px double black;
+    outline: 3px solid black;
+    // box-shadow: 0px 3px 1px -2px rgba(0, 0 ,0,0.2), 0px 2px 3px 0px rgba(0, 0 ,0,0.14), 0px 1px 5px 0px rgba(0, 0 ,0,0.12);
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 30px 0 rgba(0, 0, 0, 0.19);
+    
   }
 
   .form-signin .form-control {
